@@ -28,7 +28,7 @@ function Run() {
 }
 
 function Notify(title) {
-  chrome.notifications.create("bingwall", {type: 'basic', iconUrl: '128.png', title: "Bing Background Wallpaper", message: title, contextMessage: "New wallpaper! Click to see ..."},function() {}) }
+  chrome.notifications.create("bingwall", {type: 'basic', iconUrl: 'icons/128.png', title: "Bing Background Wallpaper", message: title, contextMessage: "New wallpaper! Click to see ..."},function() {}) }
 
 function reply() {
   window.open(launchURL);

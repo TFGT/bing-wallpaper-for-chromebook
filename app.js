@@ -1,6 +1,6 @@
 function Notify() {
   chrome.notifications.clear("bingwall", function() {});
-  chrome.notifications.create("bingwall", {type: 'basic', iconUrl: '128.png', title: "Bing Background Wallpaper", message: "Wallpaper refreshed ..."},function() {});
+  chrome.notifications.create("bingwall", {type: 'basic', iconUrl: 'icons/128.png', title: "Bing Background Wallpaper", message: "Wallpaper refreshed ..."},function() {});
 }
 
 function reload() {
@@ -13,7 +13,7 @@ function reload() {
         data = this.response;
         url = data.images[0].url;
         if(url) {
-          chrome.wallpaper.setWallpaper({'url': 'https://www.bing.com'+url, 'layout': 'STRETCH', 'filename': 'bing_wallpaper'}, function() { 
+          chrome.wallpaper.setWallpaper({'url': 'https://www.bing.com'+url, 'layout': 'STRETCH', 'filename': 'bing_wallpaper'}, function() {
               Notify();
               document.querySelector('#reload').innerText = "";
           });
